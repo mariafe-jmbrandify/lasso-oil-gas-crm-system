@@ -8,6 +8,23 @@
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Why Lasso O&G OS?](#why-lasso-og-os)
+- [Key Features](#key-features)
+- [Product Architecture](#product-architecture)
+- [Acquisition Workflow](#acquisition-workflow)
+- [Technology Stack](#technology-stack)
+- [Documentation](#documentation)
+- [Repository Structure](#repository-structure)
+- [Roadmap](#roadmap)
+- [Current Status](#current-status)
+- [Author](#author)
+- [License](#license)
+
+---
+
 ## Overview
 
 Lasso O&G OS is a modern CRM and operations platform built to streamline the entire mineral acquisition process for oil & gas companies.
@@ -15,6 +32,27 @@ Lasso O&G OS is a modern CRM and operations platform built to streamline the ent
 The platform centralizes owner management, PSA tracking, land assets, mail campaigns, due diligence, document management, closing, and payment workflows into one unified system.
 
 Instead of relying on disconnected spreadsheets and manual tracking, Lasso O&G OS provides a single operational workspace that improves visibility, collaboration, and efficiency across the acquisition lifecycle.
+
+---
+
+## Why Lasso O&G OS?
+
+Traditional mineral acquisition teams often rely on spreadsheets, email chains, shared drives, and disconnected CRM systems to manage complex acquisition workflows.
+
+Lasso O&G OS replaces those fragmented tools with a centralized platform that manages every stage of the acquisition lifecycle—from prospecting and purchase agreements to title review, curative, closing, and payment.
+
+The platform is designed to improve operational visibility, reduce manual work, standardize business processes, and enable AI-assisted decision-making.
+
+---
+
+## AI Capabilities
+
+- Claude-powered operational assistant
+- AI document summaries
+- AI deal analysis
+- Workflow recommendations
+- Natural language search
+- AI-generated daily briefings
 
 ---
 
@@ -107,122 +145,176 @@ Instead of relying on disconnected spreadsheets and manual tracking, Lasso O&G O
 
 # Product Architecture
 
-```text
-Lasso O&G OS
-│
-├── Dashboard
-├── CRM
-├── Mailers
-├── Campaigns
-├── Land Assets
-├── Due Diligence
-├── Closing
-├── Documents
-├── Reports
-├── AI Assistant
-└── Settings
+```mermaid
+flowchart LR
+    Dashboard --> CRM
+    CRM --> Deals
+    Deals --> PSA
+    PSA --> TitleReview
+    TitleReview --> Curative
+    Curative --> Closing
+    Closing --> Payments
 ```
 
 ---
 
 # Acquisition Workflow
 
-```text
-Lead
-    │
-Interested
-    │
-Evaluation
-    │
-Offer
-    │
-PSA Drafting
-    │
-PSA Sent
-    │
-PSA Executed
-    │
-Title Review
-    │
-Curative
-    │
-Ready To Close
-    │
-Closing
-    │
-Payment
-    │
-Completed
+```mermaid
+flowchart TD
+    Lead --> Interested
+    Interested --> Evaluation
+    Evaluation --> Offer
+    Offer --> PSADrafting
+    PSADrafting --> PSASent
+    PSASent --> PSAExecuted
+    PSAExecuted --> TitleReview
+    TitleReview --> Curative
+    Curative --> ReadyToClose
+    ReadyToClose --> Closing
+    Closing --> Payment
+    Payment --> Completed
 ```
 
 ---
 
 # Technology Stack
 
-## Frontend
+### Frontend
 
-- HTML5
-- CSS3
-- JavaScript
+- React
+- Next.js
+- Tailwind CSS
+- TypeScript
 
-## Backend (Planned)
+### Backend
 
 - Node.js
-- Express.js
+- Express.js (or NestJS)
 
-## Database
+### Database
 
 - PostgreSQL
-- Supabase (Planned)
+- Prisma ORM
+- Supabase
 
-## AI
+### AI
 
-- Claude AI
-- OpenAI API
+- Claude
+- OpenAI
 
-## Automation
+### Automation
 
 - n8n
 - Make.com
 - Google Apps Script
-- Chrome Extension
 
-## Integrations
+### Infrastructure
 
-- Google Workspace
-- Texas Railroad Commission (RRC)
-- Google Drive
-- Gmail
-- DocuSign
+- GitHub Actions
+- Docker
+- Vercel
+- Railway
+
+---
+
+## Documentation
+
+| Document | Description |
+|-----------|-------------|
+| [docs/PROJECT_OVERVIEW.md](docs/PROJECT_OVERVIEW.md) | Product vision and goals |
+| [docs/PRODUCT_ARCHITECTURE.md](docs/PRODUCT_ARCHITECTURE.md) | Product modules |
+| [docs/SYSTEM_ARCHITECTURE.md](docs/SYSTEM_ARCHITECTURE.md) | System architecture |
+| [docs/DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md) | Database design |
+| [docs/BUSINESS_WORKFLOWS.md](docs/BUSINESS_WORKFLOWS.md) | Operational workflows |
+| [docs/PSA_DEALS.md](docs/PSA_DEALS.md) | Purchase & Sale Agreement workflow |
+| [docs/TITLE_REVIEW.md](docs/TITLE_REVIEW.md) | Title examination |
+| [docs/CURATIVE.md](docs/CURATIVE.md) | Curative process |
+| [docs/CLOSING.md](docs/CLOSING.md) | Closing workflow |
+| [docs/PAYMENTS.md](docs/PAYMENTS.md) | Payment processing |
+
+## Roadmap
+
+Planned enhancements include deeper AI automation, expanded integrations with industry systems, richer reporting, and more workflow orchestration across the acquisition lifecycle.
+
+## Current Status
+
+| Module | Status |
+|---------|--------|
+| Dashboard | ✅ Complete |
+| CRM | ✅ Complete |
+| Deals | ✅ Complete |
+| Mailers | ✅ Complete |
+| Assets | ✅ Complete |
+| Documents | ✅ Complete |
+| PSA | 🚧 In Progress |
+| Title Review | 🚧 In Progress |
+| Curative | 📋 Planned |
+| Closing | 📋 Planned |
+| Payments | 📋 Planned |
+| AI Assistant | 📋 Planned |
 
 ---
 
 # Repository Structure
 
 ```text
-lasso-oil-gas-crm-system/
+lasso-og-os/
 │
 ├── docs/
-├── diagrams/
-├── modules/
-├── screenshots/
-├── src/
-└── database/
+│   ├── architecture/
+│   ├── workflows/
+│   ├── ai/
+│   ├── business/
+│   └── api/
+│
+├── frontend/
+├── backend/
+├── database/
+├── automation/
+├── chrome-extension/
+├── assets/
+│   ├── diagrams/
+│   └── screenshots/
+│
+├── .claude/
+├── .github/
+└── README.md
 ```
 
 ---
 
 # Screenshots
 
+### Campaign
+
+![Campaign screenshot](screenshots/Campaign.png)
+
 ### Dashboard
 
-*Coming Soon*
+![Dashboard screenshot](screenshots/Dashboard.png)
 
 ### Deals
 
-*Coming Soon*
+![Deals screenshot](screenshots/Deals.png)
 
 ### Mailers
+
+![Mailers screenshot](screenshots/Mailer.png)
+
+### Documents
+
+![Documents screenshot](screenshots/Documents.png)
+
+---
+
+## Author
+
+Lasso O&G OS is being developed as an internal platform concept and repository initiative.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 *Coming Soon*
 
@@ -318,7 +410,9 @@ lasso-oil-gas-crm-system/
 
 # Status
 
-🚧 This project is currently under active development and serves as a portfolio project demonstrating CRM architecture, workflow automation, AI integration, and operational system design for the oil & gas industry.
+🚧 Lasso O&G OS is currently under active development.
+
+The repository follows a documentation-first approach, with production-quality architecture, workflows, and operational specifications designed to support a scalable AI-powered CRM for mineral acquisition teams.
 
 ---
 
