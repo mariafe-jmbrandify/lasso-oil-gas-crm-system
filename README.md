@@ -273,31 +273,73 @@ lasso-oil-gas-crm-system/
 ├── README.md
 ├── LICENSE
 ├── CHANGELOG.md
+├── CONTRIBUTING.md
 │
 ├── docs/
+│   ├── API_DOCUMENTATION.md
+│   ├── BUSINESS_WORKFLOWS.md
+│   ├── DATABASE_SCHEMA.md
+│   ├── DEPLOYMENT.md
+│   ├── FAQ.md
+│   ├── PRODUCT_ARCHITECTURE.md
+│   ├── PROJECT_OVERVIEW.md
+│   ├── ROADMAP.md
+│   ├── SECURITY.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   ├── TESTING.md
+│   ├── USER_ROLES.md
+│   └── SOP/
+│       ├── SOP_README.md
+│       ├── Closing-Wire-Verification.md
+│       ├── Due-Diligence-Review.md
+│       └── Owner-Outreach.md
 │
 ├── modules/
-│   ├── Dashboard.md
-│   ├── Deals.md
-│   ├── Mailers.md
-│   ├── Campaigns.md
-│   ├── Assets.md
-│   ├── Documents.md
-│   ├── Due-Diligence.md
-│   ├── Title-Review.md
-│   ├── Curative.md
-│   ├── Closing.md
-│   ├── Payments.md
-│   ├── Reports.md
-│   ├── Tasks.md
+│   ├── Dashboard/
+│   ├── Deals/
+│   ├── Mailers/
+│   ├── Campaigns/
+│   ├── Assets/
+│   ├── Documents/
+│   ├── Due-Diligence/
+│   ├── Title Reviews/
+│   ├── Curative/
+│   ├── Closing/
+│   ├── Payments/
+│   ├── Reports/
+│   ├── Tasks/
+│   ├── Settings/
 │   └── AI/
+│       ├── AI_ASSISTANT.md
+│       ├── AI_AUTOMATION.md
+│       ├── AI_DEAL_ANALYST.md
+│       ├── AI_DOCUMENT_ANALYSIS.md
+│       ├── AI_DUE_DILIGENCE.md
+│       ├── AI_EMAIL_ASSISTANT.md
+│       ├── AI_README.md
+│       ├── AI_REPORTS.md
+│       ├── AI_SEARCH.md
+│       ├── AI_TITLE_ANALYST.md
+│       ├── LLM_ARCHITECTURE.md
+│       ├── MCP_INTEGRATION.md
+│       └── PROMPT_LIBRARY.md
 │
 ├── assets/
 │   └── screenshots/
+│       ├── 01-dashboard.png
+│       ├── 02-deals.png
+│       ├── 03-mailers.png
+│       ├── 04-campaigns.png
+│       ├── 05-assets.png
+│       └── 06-documents.png
 │
 ├── diagrams/
 │
-└── database/
+├── database/
+│
+├── src/
+│
+└── .vscode/
 ```
 
 ---
