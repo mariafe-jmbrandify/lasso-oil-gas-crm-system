@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Lasso O&G OS Banner" width="100%">
-</p>
-
 # Lasso O&G OS
 
 > **An AI-Powered CRM & Operations Platform for Oil & Gas Mineral Acquisitions**
